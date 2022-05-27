@@ -1,0 +1,194 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+#nav1 {
+    display: flex;
+    padding: 10px;
+    border-bottom: 0.5px solid lightgrey;
+}
+
+#nav1 #span1 {
+    flex-basis: 45%;
+    padding-top: 13px;
+    padding-left: 50px;
+}
+
+
+#nav1 #span2 {
+    flex-basis: 25%;
+    padding-top: 13px;
+}
+
+
+#nav1 #span3 {
+    flex-basis: 10%;
+    padding-top: 13px;
+}
+
+
+#nav1 #span5 {
+    flex-basis: 10%;
+    padding-top: 13px;
+}
+
+
+#nav1 #span6 {
+    flex-basis: 10%;
+    padding-top: 13px;
+}
+
+/* for small screen */
+
+#nav2 {
+    display: none;
+}
+
+.direct_ion {
+    display: none;
+}
+
+.card {
+    border: none;
+}
+
+
+/* styling the list of item */
+
+.card_body {
+    /* text-align: center; */
+    margin-top: 10px;
+    /* padding-top: 20px; */
+    box-shadow: 2px 2px 5px 5px rgb(227, 226, 226);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.img_ok {
+    width: 100px;
+    height: 100px;
+}
+
+.h2_ok {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.h4_ok {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.btn_ok {
+    float: right;
+    margin-top: 30px;
+    border: none;
+    box-shadow: 2px 2px 5px 5px rgb(227, 226, 226);
+    background-color: yellowgreen;
+    color: white;
+    margin-right: 20px;
+    border-bottom-right-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+/* check out styling */
+
+
+.check_out {
+    display: none;
+    margin-top: 60px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.check_out button {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 70%;
+    border: none;
+    background-color: yellowgreen;
+    border-bottom-right-radius: 20px;
+    font-size: 30px;
+    color: white;
+    transition: background 0.5s ease-in-out;
+}
+
+.check_out button:hover {
+    background-color: white;
+    border: 5px solid yellowgreen;
+    color: yellowgreen;
+}
+
+.footer_ok {
+    width: 100%;
+    margin: 0px auto;
+    background-color: rgb(45,45,45);
+    padding-top: 50px;
+}
+
+.footer_ok .card {
+    background-color: rgb(45,45,45);
+    color: white;
+}
+
+@media (max-width: 992px) {
+    .footer_ok {
+        text-align: center;
+    }
+}
+
+@media (max-width: 627px) {
+
+
+    
+    #nav2 {
+        display: flex;
+        padding: 10px;
+    }
+
+    #nav2 #span1 {
+        flex-basis: 45%;
+        padding-top: 10px;
+        text-align: center;
+    }
+    
+    #nav2 #span2 {
+        flex-basis: 45%;
+    }
+
+    #nav2 #span3 {
+       flex-basis: 10%;
+    }
+
+    .direct_ion {
+        display: block;
+        text-align: center;
+        border-bottom: 0.5px solid lightgrey;
+    }
+    
+    #span12 {
+        font-size: 0px;
+    }
+
+    #span13 {
+        font-size: 0px;
+    }
+
+    #span14 {
+        font-size: 0px;
+    }
+
+    #span11 {
+        display: none;
+    }
+
+    #nav1 {
+        display: none;
+    }
+}

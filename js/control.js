@@ -10,6 +10,8 @@ document.getElementById("span4").addEventListener("click", function() {
 
     let div = document.getElementsByClassName("all")[0];
 
+    // div.style.fontSize = "initial";
+
     div.style.display = "block";
 
 })
@@ -150,3 +152,462 @@ function carry_run1(text_1, text_2, text_3, text_4) {
 
 
 }
+
+
+// change text display
+
+
+
+window.addEventListener("load", function() {
+
+
+    let w = window.innerWidth;
+
+
+    if(w <= 989) {
+        
+        let text = document.querySelectorAll("#change_display").length;
+
+
+        for(let i = 0; i < text; i++) {
+
+            document.querySelectorAll("#change_display")[i].classList.remove("col-sm-4");
+
+            document.querySelectorAll("#change_display")[i].classList.add("col-sm-6")
+            
+        }
+
+
+    
+
+
+    }
+
+    if(w <= 768) {
+        
+        let text = document.querySelectorAll("#change_display").length;
+
+
+        for(let i = 0; i < text; i++) {
+
+            document.querySelectorAll("#change_display")[i].classList.remove("col-sm-6");
+
+            document.querySelectorAll("#change_display")[i].classList.add("col-sm-12")
+            
+        }
+    
+
+
+    }
+
+
+
+
+
+})
+
+// setInterval(run, 6000);
+
+
+
+let i = 1;
+
+
+function run() {
+
+    
+
+
+}
+
+
+function run1(){
+
+    if(i == 1) {
+
+        document.querySelectorAll(".text_l")[0].childNodes[1].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[0].childNodes[3].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[0].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[0].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[2].childNodes[1].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[2].childNodes[3].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[2].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[2].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[3].childNodes[1].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[3].childNodes[3].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[3].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[3].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+
+
+        document.querySelectorAll(".text_l")[1].childNodes[1].style.fontSize = "initial";
+
+        document.querySelectorAll(".text_l")[1].childNodes[3].style.fontSize = "30px";
+
+        document.querySelectorAll(".text_l")[1].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[1].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+        i = 2;
+    }
+
+    document.getElementsByClassName("arr_2")[0].setAttribute("onclick", "run2()")
+
+
+}
+
+function run2(){
+
+    if(i == 2) {
+
+        document.querySelectorAll(".text_l")[0].childNodes[1].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[0].childNodes[3].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[0].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[0].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[1].childNodes[1].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[1].childNodes[3].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[1].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[1].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[3].childNodes[1].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[3].childNodes[3].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[3].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[3].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+
+
+        document.querySelectorAll(".text_l")[2].childNodes[1].style.fontSize = "initial";
+
+        document.querySelectorAll(".text_l")[2].childNodes[3].style.fontSize = "30px";
+
+        document.querySelectorAll(".text_l")[2].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[2].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+        i = 3;
+    }
+
+
+
+
+    document.getElementsByClassName("arr_2")[0].setAttribute("onclick", "run3()")
+
+
+    
+}
+
+
+
+function run3(){
+
+    if(i == 3) {
+
+        document.querySelectorAll(".text_l")[0].childNodes[1].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[0].childNodes[3].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[0].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[0].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[2].childNodes[1].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[2].childNodes[3].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[2].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[2].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[1].childNodes[1].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[1].childNodes[3].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[1].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[1].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+
+
+        document.querySelectorAll(".text_l")[3].childNodes[1].style.fontSize = "initial";
+
+        document.querySelectorAll(".text_l")[3].childNodes[3].style.fontSize = "30px";
+
+        document.querySelectorAll(".text_l")[3].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[3].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+        i = 4;
+    }
+
+
+
+    document.getElementsByClassName("arr_2")[0].setAttribute("onclick", "run4()")
+
+}
+
+
+function run4(){
+
+
+    if(i == 4) {
+
+        document.querySelectorAll(".text_l")[1].childNodes[1].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[1].childNodes[3].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[1].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[1].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[2].childNodes[1].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[2].childNodes[3].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[2].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[2].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[3].childNodes[1].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[3].childNodes[3].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[3].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[3].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+
+
+        document.querySelectorAll(".text_l")[0].childNodes[1].style.fontSize = "initial";
+
+        document.querySelectorAll(".text_l")[0].childNodes[3].style.fontSize = "30px";
+
+        document.querySelectorAll(".text_l")[0].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[0].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+        i = 1;
+    }
+
+     document.getElementsByClassName("arr_2")[0].setAttribute("onclick","run1()")
+}
+
+
+// second button
+
+
+let a = 1
+
+function speed1(){
+
+    if(a == 1) {
+
+        document.querySelectorAll(".text_l")[0].childNodes[1].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[0].childNodes[3].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[0].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[0].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[1].childNodes[1].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[1].childNodes[3].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[1].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[1].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[2].childNodes[1].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[2].childNodes[3].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[2].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[2].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+
+
+        document.querySelectorAll(".text_l")[3].childNodes[1].style.fontSize = "initial";
+
+        document.querySelectorAll(".text_l")[3].childNodes[3].style.fontSize = "30px";
+
+        document.querySelectorAll(".text_l")[3].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[3].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+        a = 4;
+    }
+
+    document.getElementsByClassName("arr_1")[0].setAttribute("onclick", "speed2()")
+
+
+}
+
+function speed2(){
+
+    if(a == 4) {
+
+
+        document.querySelectorAll(".text_l")[0].childNodes[1].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[0].childNodes[3].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[0].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[0].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[1].childNodes[1].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[1].childNodes[3].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[1].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[1].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[3].childNodes[1].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[3].childNodes[3].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[3].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[3].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+
+
+        document.querySelectorAll(".text_l")[2].childNodes[1].style.fontSize = "initial";
+
+        document.querySelectorAll(".text_l")[2].childNodes[3].style.fontSize = "30px";
+
+        document.querySelectorAll(".text_l")[2].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[2].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+        a = 3;
+    }
+
+
+    document.getElementsByClassName("arr_1")[0].setAttribute("onclick", "speed3()")
+
+
+    
+}
+
+
+
+function speed3(){
+
+    if(a == 3) {
+
+
+        document.querySelectorAll(".text_l")[0].childNodes[1].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[0].childNodes[3].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[0].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[0].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[2].childNodes[1].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[2].childNodes[3].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[2].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[2].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[3].childNodes[1].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[3].childNodes[3].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[3].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[3].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+
+
+        document.querySelectorAll(".text_l")[1].childNodes[1].style.fontSize = "initial";
+
+        document.querySelectorAll(".text_l")[1].childNodes[3].style.fontSize = "30px";
+
+        document.querySelectorAll(".text_l")[1].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[1].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+        a = 2;
+    }
+
+
+
+    document.getElementsByClassName("arr_1")[0].setAttribute("onclick", "speed4()")
+
+}
+
+
+function speed4(){
+
+
+    if(a == 2) {
+
+        document.querySelectorAll(".text_l")[1].childNodes[1].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[1].childNodes[3].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[1].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[1].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[2].childNodes[1].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[2].childNodes[3].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[2].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[2].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[3].childNodes[1].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[3].childNodes[3].style.fontSize = "0px";
+
+        document.querySelectorAll(".text_l")[3].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[3].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+
+        document.querySelectorAll(".text_l")[0].childNodes[1].style.fontSize = "initial";
+
+        document.querySelectorAll(".text_l")[0].childNodes[3].style.fontSize = "30px";
+
+        document.querySelectorAll(".text_l")[0].childNodes[1].style.transition = "font-size 0.9s ease-in-out";
+
+        document.querySelectorAll(".text_l")[0].childNodes[3].style.transition = "font-size 0.9s ease-in-out";
+
+        a = 1;
+    }
+
+     document.getElementsByClassName("arr_1")[0].setAttribute("onclick","speed1()")
+}
+
+
+
+
+console.log(document.querySelectorAll(".text_l"));
