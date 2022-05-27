@@ -2,13 +2,13 @@
 document.querySelector(".span3").addEventListener("click", function() {
 
 
-    document.getElementById("span12").style.transition = "font-size 0.3s ease-in";
+    document.getElementById("span12").style.transition = "font-size 0.5s ease-in";
 
     document.getElementById("span11").style.transition = "display 0.1s ease-in";
    
-    document.getElementById("span13").style.transition = "font-size 0.4s ease-in";
+    document.getElementById("span13").style.transition = "font-size 0.6s ease-in";
    
-    document.getElementById("span14").style.transition = "font-size 0.5s ease-in";
+    document.getElementById("span14").style.transition = "font-size 0.7s ease-in";
 
 
     document.getElementById("span12").style.fontSize = "30px";
@@ -36,13 +36,13 @@ document.querySelector(".span3").addEventListener("click", function() {
 
 function run() {
 
-    document.getElementById("span12").style.transition = "font-size 0.5s ease-in";
+    document.getElementById("span12").style.transition = "font-size 0.7s ease-in";
 
     document.getElementById("span11").style.transition = "display 0.1s ease-in";
    
-    document.getElementById("span13").style.transition = "font-size 0.4s ease-in";
+    document.getElementById("span13").style.transition = "font-size 0.6s ease-in";
    
-    document.getElementById("span14").style.transition = "font-size 0.3s ease-in";
+    document.getElementById("span14").style.transition = "font-size 0.5s ease-in";
 
 
     document.getElementById("span12").style.fontSize = "0px";
