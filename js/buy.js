@@ -77,7 +77,7 @@ function call_again() {
     let getItem = localStorage.getItem("store");
 
     if(getItem == null){
-        window.location.href = "index.html";
+        window.location.href = "index.php";
     } else {
         getItem = JSON.parse(getItem);
 
@@ -195,13 +195,13 @@ function ok_run() {
         
         } else {
 
-            window.location.href = "index.html";
+            window.location.href = "index.php";
 
         }
 
         if(check.length == 0) {
 
-            window.location.href = "index.html";
+            window.location.href = "index.php";
         }
 
       

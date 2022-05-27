@@ -95,10 +95,10 @@ for(let i = 0; i < btn; i++) {
 
 document.getElementById("buy_now").addEventListener("click", function() {
 
-    window.location.href = "buy.html"
+    window.location.href = "buy.php"
 })
 
 document.getElementById("add_span").addEventListener("click", function() {
 
-    window.location.href = "buy.html"
+    window.location.href = "buy.php"
 })
