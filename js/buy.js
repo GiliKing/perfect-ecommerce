@@ -188,7 +188,7 @@ function ok_run() {
      
                      localStorage.setItem("store", JSON.stringify(list_product));
      
-                     window.location.href = "buy.html";
+                     window.location.href = "buy.php";
      
                 }
              }
