@@ -577,6 +577,11 @@ div.text-img button {
 }
 
 @media (max-width: 1024px) {
+
+    .footer_ok {
+        text-align: center;
+    }
+    
     #nav1 {
         display: none;
     }
@@ -598,6 +603,11 @@ div.text-img button {
 }
 
 @media (max-width: 994px) {
+
+    .footer_ok {
+        text-align: center;
+    }
+
     .fifth_text_1 {
         right: 100px;
         width: 50%;
