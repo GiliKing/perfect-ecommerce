@@ -183,6 +183,10 @@ div.text-img button {
 
 /* drop down styling item */
 
+#nav2 #span8 {
+    cursor: pointer;
+}
+
 .current_m {
     font-size: 0px;
 }
@@ -191,6 +195,7 @@ div.text-img button {
     padding-top: 15px;
     padding-bottom: 15px;
     font-size: 30px;
+    transition: background-color 0.5s ease-in-out;
 }
 
 .shop_only {
@@ -201,6 +206,7 @@ div.text-img button {
     padding-top: 15px;
     padding-bottom: 15px;
     font-size: 30px;
+    transition: background-color 0.5s ease-in-out;
 }
 
 .grab_only {
@@ -211,6 +217,7 @@ div.text-img button {
     padding-top: 15px;
     padding-bottom: 15px;
     font-size: 30px;
+    transition: background-color 0.5s ease-in-out;
 }
 
 .blog_only {
@@ -221,6 +228,27 @@ div.text-img button {
     padding-top: 15px;
     padding-bottom: 15px;
     font-size: 30px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.blog_ok:hover {
+    background-color: yellowgreen;
+    color: white;
+}
+
+.grab_ok:hover {
+    background-color: yellowgreen;
+    color: white;
+}
+
+.current_ok:hover {
+    background-color: yellowgreen;
+    color: white;
+}
+
+.shop_ok:hover {
+    background-color: yellowgreen;
+    color: white;
 }
 
 

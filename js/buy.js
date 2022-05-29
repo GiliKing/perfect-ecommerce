@@ -154,8 +154,6 @@ function ok_run() {
 
     let list_product = [];
 
-
-
     for(let i = 0; i < btn_ok; i++) {
 
         document.getElementsByClassName("btn_ok")[i].style.float = "right";
@@ -164,45 +162,45 @@ function ok_run() {
 
         document.getElementsByClassName("btn_ok")[i].addEventListener("click", function() {
 
-        let dad  = document.getElementsByClassName("btn_ok")[i].parentElement;
+            let dad  = document.getElementsByClassName("btn_ok")[i].parentElement;
 
-        let hide_id = dad.childNodes[4].value;
+            let hide_id = dad.childNodes[4].value;
 
-        console.log(hide_id);
+            console.log(hide_id);
 
-        let check = localStorage.getItem("store");
+            let check = localStorage.getItem("store");
 
-        check = JSON.parse(check);
+            check = JSON.parse(check);
 
-        check.splice(hide_id, 1);
+            check.splice(hide_id, 1);
 
-        localStorage.removeItem("store");
+            localStorage.removeItem("store");
 
-        if(check != null) {
+            if(check != null) {
 
-            for(let i = 0; i < check.length; i++) {
+                for(let i = 0; i < check.length; i++) {
 
-                if(check[i] != null) {
-     
-                     list_product.push (check[i]);
-     
-                     localStorage.setItem("store", JSON.stringify(list_product));
-     
-                     window.location.href = "buy.php";
-     
-                }
-             }
+                    if(check[i] != null) {
         
-        } else {
+                        list_product.push (check[i]);
+        
+                        localStorage.setItem("store", JSON.stringify(list_product));
+        
+                        window.location.href = "buy.php";
+        
+                    }
+                }
+            
+            } else {
 
-            window.location.href = "index.php";
+                window.location.href = "index.php";
 
-        }
+            }
 
-        if(check.length == 0) {
+            if(check.length == 0) {
 
-            window.location.href = "index.php";
-        }
+                window.location.href = "index.php";
+            }
 
       
 

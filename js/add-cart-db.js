@@ -82,6 +82,24 @@ for(let i = 0; i < btn; i++) {
             id: d
         }
 
+        // add ajax to 
+
+        $.ajax({
+            url: "process/form.php",
+            method: "POST",
+            data : {
+                name_item: bb,
+                price_item: c,
+                image_item: a,
+                id: d
+            },
+            success: function(data) {
+                
+                console.log(data.trim());
+                
+            }
+        })
+
 
         store.push(store_list);
 

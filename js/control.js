@@ -608,6 +608,45 @@ function speed4(){
 }
 
 
+// login button and register button
 
 
-console.log(document.querySelectorAll(".text_l"));
+document.getElementById("span8").addEventListener("click", function() {
+
+    window.location.href = "login.php";
+
+
+})
+
+document.getElementById("only_only").addEventListener("click", function() {
+
+    window.location.href = "login.php";
+
+
+})
+
+
+document.getElementById("span7").addEventListener("click", function() {
+
+    window.location.href = "register.php";
+
+
+})
+
+document.getElementsByClassName("blog_only")[0].addEventListener("click", function() {
+
+    window.location.href = "register.php";
+    
+})
+
+document.getElementsByClassName("blog_ok")[0].addEventListener("click", function() {
+
+    window.location.href = "register.php";
+    
+})
+
+
+
+
+
+
