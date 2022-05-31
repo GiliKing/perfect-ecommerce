@@ -107,6 +107,16 @@ document.getElementsByTagName("button")[0].addEventListener("click", function() 
                 }
 
 
+                if(data.trim() == "verify") {
+
+                    document.querySelector('#email').value = "";
+                    document.querySelector('#password').value = "";
+
+                    window.location.href = "verify.php";
+                    
+                }
+
+
             }
         })
 

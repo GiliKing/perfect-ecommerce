@@ -34,7 +34,6 @@ if(isset($_POST["email_login"])) {
 
     echo $feedback;
 
-
 }
 
 

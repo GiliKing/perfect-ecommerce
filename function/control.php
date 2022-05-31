@@ -37,31 +37,50 @@ function register($name, $email, $password, $token) {
     
         if($result) {
 
-            session_start();
+            $check_again = "SELECT * FROM `users` WHERE `email` = '$email_entry' LIMIT 1";
 
-            
-            $_SESSION['users'] = mysqli_fetch_array($result, MYSQLI_ASSOC);
+            $check_result = mysqli_query($conn, $check_again);
 
-            $_SESSION['users']['name1'] = $_SESSION['users']['name'];
-        
-            $_SESSION['users']['email1'] = $_SESSION['users']['email'];
-                    
-            $verified = $_SESSION['users']['verified'];
+            if($check_result) {
 
-            if($verified == 0) {
 
-                $_SESSION['users']['verify1'] = $_SESSION['users']['verified'];
+                if(mysqli_num_rows($check_result) == 1) {
 
-                $_SESSION['users']['token_tok'] = $_SESSION['users']['token'];
+                    session_start();
 
-                echo "verify";
+                    $_SESSION['users'] = mysqli_fetch_array($check_result, MYSQLI_ASSOC);
+
+                    $_SESSION['users']['name1'] = $_SESSION['users']['name'];
+                
+                    $_SESSION['users']['email1'] = $_SESSION['users']['email'];
+                            
+                    $verified = $_SESSION['users']['verified'];
+
+                    if($verified == 0) {
+
+                        $_SESSION['users']['verify1'] = $_SESSION['users']['verified'];
+
+                        $_SESSION['users']['token_tok'] = $_SESSION['users']['token'];
+
+                        echo "verify";
+
+                    } else {
+
+                        $_SESSION['users']['verify1'] = $_SESSION['users']['verify'];
+
+                        echo "yes";
+
+                    }
+
+                } else {
+
+                    mysqli_error($conn);
+                }
 
             } else {
 
-                $_SESSION['users']['verify1'] = $_SESSION['users']['verify'];
-
-                echo "yes";
-
+                mysqli_error($conn);
+                
             }
     
         } else {
@@ -142,6 +161,9 @@ function login($email, $password) {
 
                     if(mysqli_num_rows($result1) == 1) {
 
+
+                        session_start();
+
                         $_SESSION['users'] = mysqli_fetch_array($result1, MYSQLI_ASSOC);
 
                         $_SESSION['users']['name1'] = $_SESSION['users']['name'];
@@ -160,10 +182,11 @@ function login($email, $password) {
 
                         } else {
 
-                            $_SESSION['users']['verify1'] = $_SESSION['users']['verify'];
+                            $_SESSION['users']['email1'] = $_SESSION['users']['email'];
+
+                            $_SESSION['users']['verify1'] = $_SESSION['users']['verified'];
 
                             echo "yes";
-
 
                         }
         

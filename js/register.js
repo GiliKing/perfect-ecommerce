@@ -85,19 +85,6 @@ document.getElementsByTagName("button")[0].addEventListener("click", function() 
 
                 console.log(data.trim());
 
-                // if(data.trim() == "err") {
-
-                //     window.location.href = "error";
-
-                //     document.querySelector('#in1').value = "";
-                //     document.querySelector('#in2').value = "";
-                //     document.querySelector('#in3').value = "";
-                //     document.querySelector('#in4').value = "";
-
-                    
-                    
-                // }
-
                 if(data.trim() == "exist") {
 
                     document.querySelector('.exist').style.display = 'block';
@@ -106,21 +93,30 @@ document.getElementsByTagName("button")[0].addEventListener("click", function() 
 
                     document.querySelector('#name').value = "";
                     document.querySelector('#email').value = "";
-                    document.querySelector('#password').value = ""
+                    document.querySelector('#password').value = "";
                     
                 }
 
 
-                // if(data.trim() == "yes") {
+                if(data.trim() == "yes") {
 
-                //     document.querySelector('#in1').value = "";
-                //     document.querySelector('#in2').value = "";
-                //     document.querySelector('#in3').value = "";
-                //     document.querySelector('#in4').value = "";
+                    document.querySelector('#name').value = "";
+                    document.querySelector('#email').value = "";
+                    document.querySelector('#password').value = "";
 
-                //     window.location.href = "user";
+                    window.location.href = "user.php";
                     
-                // }
+                }
+
+                if(data.trim() == "verify") {
+
+                    document.querySelector('#name').value = "";
+                    document.querySelector('#email').value = "";
+                    document.querySelector('#password').value = "";
+
+                    window.location.href = "verify.php";
+                    
+                }
 
 
             }
