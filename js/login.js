@@ -124,3 +124,10 @@ document.getElementsByTagName("button")[0].addEventListener("click", function() 
     }
 
 })
+
+
+document.getElementById("sign_ok").addEventListener("click", function() {
+
+    window.location.href = "register.php";
+    
+})

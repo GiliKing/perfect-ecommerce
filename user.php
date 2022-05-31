@@ -572,6 +572,10 @@
                     </div>
                 </div>
             </div>
+
+            <div style="text-align: center; color: white; padding-bottom: 20px;">
+                <small id="giliking" style="cursor: pointer">Design by giliking</small>
+            </div>
         </div>
         <!-- end of last section -->
 

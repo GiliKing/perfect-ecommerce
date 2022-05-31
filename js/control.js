@@ -639,12 +639,17 @@ document.getElementsByClassName("blog_only")[0].addEventListener("click", functi
     
 })
 
+document.getElementById("giliking").addEventListener("click", function() {
+
+    window.location.href = "https://github.com/giliking";
+
+})
+
 document.getElementsByClassName("blog_ok")[0].addEventListener("click", function() {
 
     window.location.href = "register.php";
     
 })
-
 
 
 
