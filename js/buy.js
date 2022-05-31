@@ -212,3 +212,40 @@ function ok_run() {
 
     document.getElementById("dis_fig").innerText = add;
 }
+
+
+
+
+document.getElementById("span1").addEventListener("click", function() {
+
+    window.location.href = "index.php";
+
+})
+
+
+document.getElementById("span5").addEventListener("click", function() {
+
+    window.location.href = "register.php";
+    
+})
+
+
+document.getElementById("span6").addEventListener("click", function() {
+
+    window.location.href = "login.php";
+    
+})
+
+
+document.getElementById("login").addEventListener("click", function() {
+
+    window.location.href = "login.php";
+    
+})
+
+
+document.getElementById("signup").addEventListener("click", function() {
+
+    window.location.href = "register.php";
+    
+})
