@@ -13,7 +13,7 @@ if(isset($_POST["username"])) {
     $password = htmlspecialchars(trim($_POST['password']), ENT_QUOTES);
     $token = bin2hex(random_bytes(50));
 
-    require  'function/control.php';
+    require  '../function/control.php';
 
     $feedback = register($name, $email, $password, $token);
 
@@ -28,7 +28,7 @@ if(isset($_POST["email_login"])) {
     $password = htmlspecialchars(trim($_POST['password_login']), ENT_QUOTES);
 
     
-    require  'function/control.php';
+    require  '../function/control.php';
 
     $feedback = login($email, $password);
 

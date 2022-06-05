@@ -80,45 +80,50 @@ document.getElementsByTagName("button")[0].addEventListener("click", function() 
                 'email': email,
                 'password': password,
             },
-            success: function(data) {
+            // success: function(data) {
 
 
-                console.log(data.trim());
+            //     console.log(data.trim());
 
-                if(data.trim() == "exist") {
+            //     if(data.trim() == "exist") {
 
-                    document.querySelector('.exist').style.display = 'block';
+            //         document.querySelector('.exist').style.display = 'block';
 
-                    document.querySelector('.exist').innerHTML = "User Already Exit";
+            //         document.querySelector('.exist').innerHTML = "User Already Exit";
 
-                    document.querySelector('#name').value = "";
-                    document.querySelector('#email').value = "";
-                    document.querySelector('#password').value = "";
+            //         document.querySelector('#name').value = "";
+            //         document.querySelector('#email').value = "";
+            //         document.querySelector('#password').value = "";
                     
-                }
+            //     }
 
 
-                if(data.trim() == "yes") {
+            //     if(data.trim() == "yes") {
 
-                    document.querySelector('#name').value = "";
-                    document.querySelector('#email').value = "";
-                    document.querySelector('#password').value = "";
+            //         document.querySelector('#name').value = "";
+            //         document.querySelector('#email').value = "";
+            //         document.querySelector('#password').value = "";
 
-                    window.location.href = "user.php";
+            //         window.location.href = "user.php";
                     
-                }
+            //     }
 
-                if(data.trim() == "verify") {
+            //     if(data.trim() == "verify") {
 
-                    document.querySelector('#name').value = "";
-                    document.querySelector('#email').value = "";
-                    document.querySelector('#password').value = "";
+            //         document.querySelector('#name').value = "";
+            //         document.querySelector('#email').value = "";
+            //         document.querySelector('#password').value = "";
 
-                    window.location.href = "verify.php";
+            //         window.location.href = "verify.php";
                     
-                }
+            //     }
 
 
+            // }
+
+
+            success:function(data) {
+                alert(data);
             }
         })
 
