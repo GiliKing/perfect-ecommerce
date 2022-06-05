@@ -12,7 +12,7 @@ function register($name, $email, $password, $token) {
 
     } else {
         
-        require '../database/connect.php';
+        require 'database/connect.php';
 
         $username_entry = mysqli_real_escape_string($conn, $name);
     
@@ -95,7 +95,7 @@ function register($name, $email, $password, $token) {
 
 function check($email) {
 
-    require '../database/connect.php';
+    require 'database/connect.php';
 
 
     $email_entry = mysqli_real_escape_string($conn, $email);
