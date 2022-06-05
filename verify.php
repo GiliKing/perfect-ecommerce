@@ -75,7 +75,7 @@ if(!isset($_SESSION['users']['email1'])) {
                         <title>'.$name_entry.' Verify Your Email</title>
                     </head>
                     <body>
-                    <a href="https://auth-only.herokuapp.com/verifyemail?id='.$token_entry.'">Verify</a>
+                    <a href="https://perfect-restaurant.herokuapp.com/verifyemail?id='.$token_entry.'">Verify</a>
                     </body>
                 </html>
                 ';
