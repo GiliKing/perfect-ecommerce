@@ -8,10 +8,10 @@
 
 if(isset($_POST["username"])) {
     
-    // $name = htmlspecialchars(trim($_POST['username']), ENT_QUOTES);
-    // $email = htmlspecialchars(trim($_POST['email']), ENT_QUOTES);
-    // $password = htmlspecialchars(trim($_POST['password']), ENT_QUOTES);
-    // $token = bin2hex(random_bytes(50));
+    $name = htmlspecialchars(trim($_POST['username']), ENT_QUOTES);
+    $email = htmlspecialchars(trim($_POST['email']), ENT_QUOTES);
+    $password = htmlspecialchars(trim($_POST['password']), ENT_QUOTES);
+    $token = bin2hex(random_bytes(50));
 
     // require  '../function/control.php';
 
@@ -19,7 +19,7 @@ if(isset($_POST["username"])) {
 
     // echo $feedback;
 
-    echo "yes";
+    echo $name;
 
 }
 
