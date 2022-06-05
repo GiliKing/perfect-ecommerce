@@ -73,7 +73,7 @@ document.getElementsByTagName("button")[0].addEventListener("click", function() 
     } else {
 
         $.ajax({
-            url: 'krocess/form.php',
+            url: 'process/form.php',
             method: 'POST',
             data: {
                 'username': name,
