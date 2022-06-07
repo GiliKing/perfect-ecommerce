@@ -15,9 +15,9 @@ if(isset($_POST["username"])) {
 
     require  '../function/control.php';
 
-    // $feedback = register($name, $email, $password, $token);
+    $feedback = register($name, $email, $password, $token);
 
-    // echo $feedback;
+    echo $feedback;
 
     // echo $token;
 
