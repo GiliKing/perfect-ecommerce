@@ -4,13 +4,13 @@
 
 function register($name, $email, $password, $token) {
 
-    $responce_list = check($email);
+    // $responce_list = check($email);
 
-    if($responce_list == true ) {
+    // if($responce_list == true ) {
 
-        echo "exist";
+    //     echo "exist";
 
-    } else {
+    // } else {
         
         require '../database/connect.php';
 
@@ -90,7 +90,7 @@ function register($name, $email, $password, $token) {
         //    mysqli_error($conn);
         // }
 
-    }
+    // }
 
 }
 
