@@ -4,93 +4,91 @@
 
 function register($name, $email, $password, $token) {
 
-    // $responce_list = check($email);
+    $responce_list = check($email);
 
-    // if($responce_list == true ) {
+    if($responce_list == true ) {
 
-    //     echo "exist";
+        echo "exist";
 
-    // } else {
+    } else {
         
-    //     require 'database/connect.php';
+        require 'database/connect.php';
 
-    //     $username_entry = mysqli_real_escape_string($conn, $name);
+        $username_entry = mysqli_real_escape_string($conn, $name);
     
-    //     $email_entry = mysqli_real_escape_string($conn, $email);
+        $email_entry = mysqli_real_escape_string($conn, $email);
     
-    //     $password_entry = mysqli_real_escape_string($conn, $password);
+        $password_entry = mysqli_real_escape_string($conn, $password);
     
-    //     $token_entry = mysqli_real_escape_string($conn, $token);    
+        $token_entry = mysqli_real_escape_string($conn, $token);    
     
-    //     $verify = 0;
+        $verify = 0;
     
-    //     $hash = password_hash($password_entry, PASSWORD_DEFAULT);
+        $hash = password_hash($password_entry, PASSWORD_DEFAULT);
     
-    //     $hash_entry = mysqli_real_escape_string($conn, $hash);  
-    
-    
-    //     $check = "INSERT INTO `users` (`name`, `email`, `password`, `verified`, `token`) VALUES ('$username_entry', '$email_entry', '$hash_entry', '$verify', '$token_entry')";
+        $hash_entry = mysqli_real_escape_string($conn, $hash);  
     
     
-    //     $result = mysqli_query($conn, $check);
+        $check = "INSERT INTO `users` (`name`, `email`, `password`, `verified`, `token`) VALUES ('$username_entry', '$email_entry', '$hash_entry', '$verify', '$token_entry')";
     
     
-    //     if($result) {
+        $result = mysqli_query($conn, $check);
+    
+    
+        if($result) {
 
-    //         $check_again = "SELECT * FROM `users` WHERE `email` = '$email_entry' LIMIT 1";
+            $check_again = "SELECT * FROM `users` WHERE `email` = '$email_entry' LIMIT 1";
 
-    //         $check_result = mysqli_query($conn, $check_again);
+            $check_result = mysqli_query($conn, $check_again);
 
-    //         if($check_result) {
+            if($check_result) {
 
 
-    //             if(mysqli_num_rows($check_result) == 1) {
+                if(mysqli_num_rows($check_result) == 1) {
 
-    //                 session_start();
+                    session_start();
 
-    //                 $_SESSION['users'] = mysqli_fetch_array($check_result, MYSQLI_ASSOC);
+                    $_SESSION['users'] = mysqli_fetch_array($check_result, MYSQLI_ASSOC);
 
-    //                 $_SESSION['users']['name1'] = $_SESSION['users']['name'];
+                    $_SESSION['users']['name1'] = $_SESSION['users']['name'];
                 
-    //                 $_SESSION['users']['email1'] = $_SESSION['users']['email'];
+                    $_SESSION['users']['email1'] = $_SESSION['users']['email'];
                             
-    //                 $verified = $_SESSION['users']['verified'];
+                    $verified = $_SESSION['users']['verified'];
 
-    //                 if($verified == 0) {
+                    if($verified == 0) {
 
-    //                     $_SESSION['users']['verify1'] = $_SESSION['users']['verified'];
+                        $_SESSION['users']['verify1'] = $_SESSION['users']['verified'];
 
-    //                     $_SESSION['users']['token_tok'] = $_SESSION['users']['token'];
+                        $_SESSION['users']['token_tok'] = $_SESSION['users']['token'];
 
-    //                     echo "verify";
+                        echo "verify";
 
-    //                 } else {
+                    } else {
 
-    //                     $_SESSION['users']['verify1'] = $_SESSION['users']['verify'];
+                        $_SESSION['users']['verify1'] = $_SESSION['users']['verify'];
 
-    //                     echo "yes";
+                        echo "yes";
 
-    //                 }
+                    }
 
-    //             } else {
+                } else {
 
-    //                 mysqli_error($conn);
-    //             }
+                    mysqli_error($conn);
+                }
 
-    //         } else {
+            } else {
 
-    //             mysqli_error($conn);
+                mysqli_error($conn);
                 
-    //         }
+            }
     
-    //     } else {
+        } else {
     
-    //        mysqli_error($conn);
-    //     }
+           mysqli_error($conn);
+        }
 
-    // }
-
-    echo "yes control";
+    }
 
 }
 

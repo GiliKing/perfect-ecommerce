@@ -19,8 +19,6 @@ if(isset($_POST["username"])) {
 
     echo $feedback;
 
-    // echo $token;
-
 }
 
 
