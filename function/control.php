@@ -14,79 +14,81 @@ function register($name, $email, $password, $token) {
         
         require '../database/connect.php';
 
-        $username_entry = mysqli_real_escape_string($conn, $name);
-    
-        $email_entry = mysqli_real_escape_string($conn, $email);
-    
-        $password_entry = mysqli_real_escape_string($conn, $password);
-    
-        $token_entry = mysqli_real_escape_string($conn, $token);    
-    
-        $verify = 0;
-    
-        $hash = password_hash($password_entry, PASSWORD_DEFAULT);
-    
-        $hash_entry = mysqli_real_escape_string($conn, $hash);  
-    
-    
-        $check = "INSERT INTO `users` (`name`, `email`, `password`, `verified`, `token`) VALUES ('$username_entry', '$email_entry', '$hash_entry', '$verify', '$token_entry')";
-    
-    
-        $result = mysqli_query($conn, $check);
-    
-    
-        if($result) {
+        echo "yes move";
 
-            $check_again = "SELECT * FROM `users` WHERE `email` = '$email_entry' LIMIT 1";
+        // $username_entry = mysqli_real_escape_string($conn, $name);
+    
+        // $email_entry = mysqli_real_escape_string($conn, $email);
+    
+        // $password_entry = mysqli_real_escape_string($conn, $password);
+    
+        // $token_entry = mysqli_real_escape_string($conn, $token);    
+    
+        // $verify = 0;
+    
+        // $hash = password_hash($password_entry, PASSWORD_DEFAULT);
+    
+        // $hash_entry = mysqli_real_escape_string($conn, $hash);  
+    
+    
+        // $check = "INSERT INTO `users` (`name`, `email`, `password`, `verified`, `token`) VALUES ('$username_entry', '$email_entry', '$hash_entry', '$verify', '$token_entry')";
+    
+    
+        // $result = mysqli_query($conn, $check);
+    
+    
+        // if($result) {
 
-            $check_result = mysqli_query($conn, $check_again);
+        //     $check_again = "SELECT * FROM `users` WHERE `email` = '$email_entry' LIMIT 1";
 
-            if($check_result) {
+        //     $check_result = mysqli_query($conn, $check_again);
+
+        //     if($check_result) {
 
 
-                if(mysqli_num_rows($check_result) == 1) {
+        //         if(mysqli_num_rows($check_result) == 1) {
 
-                    session_start();
+        //             session_start();
 
-                    $_SESSION['users'] = mysqli_fetch_array($check_result, MYSQLI_ASSOC);
+        //             $_SESSION['users'] = mysqli_fetch_array($check_result, MYSQLI_ASSOC);
 
-                    $_SESSION['users']['name1'] = $_SESSION['users']['name'];
+        //             $_SESSION['users']['name1'] = $_SESSION['users']['name'];
                 
-                    $_SESSION['users']['email1'] = $_SESSION['users']['email'];
+        //             $_SESSION['users']['email1'] = $_SESSION['users']['email'];
                             
-                    $verified = $_SESSION['users']['verified'];
+        //             $verified = $_SESSION['users']['verified'];
 
-                    if($verified == 0) {
+        //             if($verified == 0) {
 
-                        $_SESSION['users']['verify1'] = $_SESSION['users']['verified'];
+        //                 $_SESSION['users']['verify1'] = $_SESSION['users']['verified'];
 
-                        $_SESSION['users']['token_tok'] = $_SESSION['users']['token'];
+        //                 $_SESSION['users']['token_tok'] = $_SESSION['users']['token'];
 
-                        echo "verify";
+        //                 echo "verify";
 
-                    } else {
+        //             } else {
 
-                        $_SESSION['users']['verify1'] = $_SESSION['users']['verify'];
+        //                 $_SESSION['users']['verify1'] = $_SESSION['users']['verify'];
 
-                        echo "yes";
+        //                 echo "yes";
 
-                    }
+        //             }
 
-                } else {
+        //         } else {
 
-                    mysqli_error($conn);
-                }
+        //             mysqli_error($conn);
+        //         }
 
-            } else {
+        //     } else {
 
-                mysqli_error($conn);
+        //         mysqli_error($conn);
                 
-            }
+        //     }
     
-        } else {
+        // } else {
     
-           mysqli_error($conn);
-        }
+        //    mysqli_error($conn);
+        // }
 
     }
 
@@ -98,29 +100,32 @@ function check($email) {
     require '../database/connect.php';
 
 
-    $email_entry = mysqli_real_escape_string($conn, $email);
+    echo "yes check";
 
-    $user_query = "SELECT * FROM `users` WHERE `email` = '$email_entry' LIMIT 1";
 
-    $users_result = mysqli_query($conn, $user_query);
+    // $email_entry = mysqli_real_escape_string($conn, $email);
 
-    if($users_result) {
+    // $user_query = "SELECT * FROM `users` WHERE `email` = '$email_entry' LIMIT 1";
 
-        if (mysqli_num_rows($users_result) == 1) {
+    // $users_result = mysqli_query($conn, $user_query);
+
+    // if($users_result) {
+
+    //     if (mysqli_num_rows($users_result) == 1) {
         
-            return true;
+    //         return true;
 
-        } else {
+    //     } else {
 
-            return false;
+    //         return false;
             
-        }
+    //     }
 
-    }else {
+    // }else {
 
-        echo mysqli_error($conn);
+    //     echo mysqli_error($conn);
 
-    }
+    // }
 
 
 }
