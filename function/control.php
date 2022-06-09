@@ -4,6 +4,9 @@
 
 function register($name, $email, $password, $token) {
 
+
+    echo "yes move";
+
     // $responce_list = check($email);
 
     // if($responce_list == true ) {
@@ -14,7 +17,6 @@ function register($name, $email, $password, $token) {
         
     // require '../database/connect.php';
 
-    echo "yes move";
 
         // $username_entry = mysqli_real_escape_string($conn, $name);
     
