@@ -5,7 +5,15 @@
 function register($name, $email, $password, $token) {
 
 
-    echo "yes move";
+
+    $ok = require '../database/connect.php';
+
+    if($ok) {
+        echo "yes";
+    } else {
+        echo "no";
+    }
+
 
     // $responce_list = check($email);
 
