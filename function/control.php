@@ -4,9 +4,9 @@
 
 function register($name, $email, $password, $token) {
 
+    echo "first";
 
-
-    $ok = require 'database/connect.php';
+    $ok = require '../database/connect.php';
 
     if($ok) {
         echo "yes";
