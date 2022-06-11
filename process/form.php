@@ -13,17 +13,11 @@ if(isset($_POST["username"])) {
     $password = htmlspecialchars(trim($_POST['password']), ENT_QUOTES);
     $token = bin2hex(random_bytes(50));
 
-    $ok = require  '../function/control.php';
+    require  '../function/control.php';
 
-    if($ok) {
-        echo "require works";
-    } else {
-        echo "it did not worked";
-    }
+    $feedback = registerOnly();
 
-    // $feedback = register($name, $email, $password, $token);
-
-    // echo $feedback;
+    echo $feedback;
 
 }
 

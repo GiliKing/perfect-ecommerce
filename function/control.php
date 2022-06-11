@@ -2,9 +2,7 @@
 <?php
 
 
-function register($name, $email, $password, $token) {
-
-    echo "first";
+function registerOnly() {
 
     $ok = require '../database/connect.php';
 
