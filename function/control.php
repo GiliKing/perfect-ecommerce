@@ -4,14 +4,16 @@
 
 function registerOnly() {
 
-    $ok = require '../database/connect.php';
+    // $ok = require '../database/connect.php';
 
-    if($ok) {
-        echo "yes";
-    } else {
-        echo "no";
-    }
+    // if($ok) {
+    //     echo "yes";
+    // } else {
+    //     echo "no";
+    // }
 
+
+    echo "yes register";
 
     // $responce_list = check($email);
 
