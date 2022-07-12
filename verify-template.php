@@ -64,10 +64,12 @@ if(!isset($_SESSION['users']['email1'])) {
 
     <div class="second">
 
-        <h2>A Verification Link has being sent to your email</h2>
-        <p>Login to your email and click on the verify link<p>
+        <div class="light_border">
+            <h1>A Verification Link has being sent to your email</h1>
+            <p>Login to your email and click on the verify link<p>
 
-        <p>Thanks for Registering</p>
+            <p>Thanks for Registering</p>
+        </div>
     </div>
 </div>
 

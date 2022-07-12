@@ -52,4 +52,17 @@ body {
         background-repeat: no-repeat;
         background-size: cover;
     }
+    
+    .light_border {
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px 5px lightgrey;
+    }
+
+    .light_border p {
+        font-size: 30px;
+    }
+
+
+
+
 }

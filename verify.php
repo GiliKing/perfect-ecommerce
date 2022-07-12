@@ -102,7 +102,7 @@ if(!isset($_SESSION['users']['email1'])) {
         
                 if($success) {
 
-                    echo "<script>window.location.assign('verify-template.php')</script>";
+                    echo "<script>window.location.href = 'verify-template.php'</script>";
                     
                     // echo 'Message has been sent';
 
