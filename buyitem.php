@@ -1,3 +1,48 @@
+<?php
+
+    session_start();
+
+    if(!isset($_SESSION['users']['email1'])) {   
+
+        header("location: index.php");
+
+    } else {
+
+        $email_entry = $_SESSION['users']['email1'];
+
+        require 'database/connect.php';
+
+        $ok_check = "SELECT `verified` AS `very` FROM `users` WHERE `email` ='$email_entry' LIMIT 1";
+
+        $ok_result = mysqli_query($conn, $ok_check);
+
+        if($ok_result) {
+
+            $row = mysqli_fetch_assoc($ok_result);
+
+            $verified = $row['very'];
+
+
+            if($verified == 1) {
+
+                // header("location: user.php");
+
+            } else { 
+                
+                header("location: error.php");
+            }
+        }
+
+
+    }
+
+
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,12 +52,14 @@
     <title></title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/buy.css">
+    <link rel="stylesheet" href="css/buyitem.css">
 
     <script src="https://kit.fontawesome.com/3aad532998.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
+
+    <input id="name_cust" type="hidden" value="<?php echo $_SESSION['users']['email1']; ?>">
 
     <div class="wrapper_only">
          <!-- for large screen -->
@@ -20,8 +67,8 @@
             <span id="span1">Cleancreations</span>
             <span id="span2"><img src="asset/client_logo.png"  width="60px" height="50px"></span>
             <span id="span3"><span id="add_span"></span><img src="asset/shopping.png" id="span4" width="30px"></span>
-            <span id="span5">Sign up</span>
-            <span id="span6">login</span>
+            <span id="span5">Home</span>
+            <span id="span6">logout</span>
         </nav>
         <!-- End Of Large Screen -->
 
@@ -39,11 +86,11 @@
             </div>
 
             <div id="span13">
-                <span id="login">Login</span>
+                <span id="signup">Home</span>
             </div>
 
             <div id="span14">
-                <span id="signup">Sign Up</span>
+                <span id="login">logout</span>
             </div>
         </div>
         <!-- End Of small Screen -->
@@ -52,7 +99,8 @@
 
         <!-- start of container -->
 
-        <div class="container mt-5">
+        <div class="container mt-5 mb-5">
+            <div class="error_back"></div>
             <div class="first_section">
                 <div class="col-sm-12">
                     <div class="row">
@@ -157,7 +205,7 @@
 
 
 
-
-    <script src="js/buy.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/buyitem.js"></script>
 </body>
 </html>

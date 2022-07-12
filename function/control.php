@@ -219,4 +219,250 @@ function login($email, $password) {
 }
 
 
+
+// storing of localStore
+
+function localStore($name_cust, $name_item, $price_item, $image_item) {
+
+    require "../database/connect.php";
+
+    $name_entry = mysqli_real_escape_string($conn, $name_cust);
+    $item_entry = mysqli_real_escape_string($conn, $name_item);
+    $price_entry = mysqli_real_escape_string($conn, $price_item);
+    $image_entry = mysqli_real_escape_string($conn, $image_item);
+
+
+    $check = "INSERT INTO `user-item` (`name`, `item`, `price`, `image`) value('$name_entry', '$item_entry', '$price_entry',  '$image_entry')";
+
+    $result = mysqli_query($conn, $check);
+
+
+    if($result) {
+        
+        $check_again = "SELECT * FROM `user-item` WHERE `name` = '$name_entry'";
+
+        $result_again = mysqli_query($conn, $check_again);
+
+        if($result_again) {
+
+            // $row = mysqli_fetch_array($result_again, MYSQLI_NUM);
+
+            // print_r($row);
+
+            $list_item = [];
+
+            while ($row = mysqli_fetch_array($result_again, MYSQLI_ASSOC)) {
+
+             $name_list = $row["name"];
+             $name_name = $row["item"];
+             $name_price = $row["price"];
+             $name_image = $row["image"];
+
+             $total = new stdClass();
+
+             $total->name = $name_list;
+             $total->item = $name_name;
+             $total->price = $name_price;
+             $total->image = $name_image;
+
+
+             Array_push($list_item, $total);
+
+            };
+
+            echo json_encode($list_item);
+
+        }
+
+    } else {
+
+        echo mysqli_error($conn);
+
+
+    }
+
+
+}
+
+
+function localStoreAgain($name_customer) {
+
+    require "../database/connect.php";
+
+    $name_entry = mysqli_real_escape_string($conn, $name_customer);
+   
+    $check_again = "SELECT * FROM `user-item` WHERE `name` = '$name_entry'";
+
+    $result_again = mysqli_query($conn, $check_again);
+
+    if($result_again) {
+
+        $list_item = [];
+
+        while ($row = mysqli_fetch_array($result_again, MYSQLI_ASSOC)) {
+
+            $name_list = $row["name"];
+            $name_name = $row["item"];
+            $name_price = $row["price"];
+            $name_image = $row["image"];
+
+            $total = new stdClass();
+
+            $total->name = $name_list;
+            $total->item = $name_name;
+            $total->price = $name_price;
+            $total->image = $name_image;
+
+
+            Array_push($list_item, $total);
+
+        };
+
+        echo json_encode($list_item);
+
+    } else {
+        
+        echo mysqli_error($conn);
+    }
+
+
+}
+
+
+
+// button click to store
+
+function normalStore($name_customer_add, $name_item_add, $price_item_add, $image_item_add) {
+
+    require "../database/connect.php";
+
+    $name_entry = mysqli_real_escape_string($conn, $name_customer_add);
+    $item_entry = mysqli_real_escape_string($conn, $name_item_add);
+    $price_entry = mysqli_real_escape_string($conn, $price_item_add);
+    $image_entry = mysqli_real_escape_string($conn, $image_item_add);
+
+
+    $check = "INSERT INTO `user-item` (`name`, `item`, `price`, `image`) value('$name_entry', '$item_entry', '$price_entry',  '$image_entry')";
+
+    $result = mysqli_query($conn, $check);
+
+
+    if($result) {
+        
+        $check_again = "SELECT * FROM `user-item` WHERE `name` = '$name_entry'";
+
+        $result_again = mysqli_query($conn, $check_again);
+
+        if($result_again) {
+
+
+            $list_item = [];
+
+            while ($row = mysqli_fetch_array($result_again, MYSQLI_ASSOC)) {
+
+             $name_list = $row["name"];
+             $name_name = $row["item"];
+             $name_price = $row["price"];
+             $name_image = $row["image"];
+
+             $total = new stdClass();
+
+             $total->name = $name_list;
+             $total->item = $name_name;
+             $total->price = $name_price;
+             $total->image = $name_image;
+
+
+             Array_push($list_item, $total);
+
+            };
+
+            echo json_encode($list_item);
+
+        }
+
+    } else {
+
+        echo mysqli_error($conn);
+
+
+    }
+
+
+}
+
+
+// selecting all the related item to display
+
+function buyStore($name_customer_ok) {
+
+    require "../database/connect.php";
+
+    $name_entry = mysqli_real_escape_string($conn, $name_customer_ok);
+   
+    $check_again = "SELECT * FROM `user-item` WHERE `name` = '$name_entry'";
+
+    $result_again = mysqli_query($conn, $check_again);
+
+    if($result_again) {
+
+        $list_item = [];
+
+        while ($row = mysqli_fetch_array($result_again, MYSQLI_ASSOC)) {
+
+            $name_list = $row["name"];
+            $name_name = $row["item"];
+            $name_price = $row["price"];
+            $name_image = $row["image"];
+            $name_id = $row["id"];
+
+            $total = new stdClass();
+
+            $total->name = $name_list;
+            $total->item = $name_name;
+            $total->price = $name_price;
+            $total->image = $name_image;
+            $total->id = $name_id;
+
+
+            Array_push($list_item, $total);
+
+        };
+
+        echo json_encode($list_item);
+
+    } else {
+        
+        echo mysqli_error($conn);
+    }
+
+
+}
+
+
+function delStore($del_id) {
+
+    require "../database/connect.php";
+   
+    $check_again = "DELETE FROM `user-item` WHERE `id` = '$del_id'";
+
+    $result_again = mysqli_query($conn, $check_again);
+
+    if($result_again) {
+
+        echo '<div class="alert alert-success">Removed Successfully
+        <button class="close" data-dismiss="alert">&times;</button>
+        </div>';
+
+    } else {
+        
+        echo mysqli_error($conn);
+    }
+
+
+}
+
+
+
+
 ?>

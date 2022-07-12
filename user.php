@@ -1,3 +1,48 @@
+
+<?php
+
+    session_start();
+
+    if(!isset($_SESSION['users']['email1'])) {   
+
+        header("location: index.php");
+
+    } else {
+
+        $email_entry = $_SESSION['users']['email1'];
+
+        require 'database/connect.php';
+
+        $ok_check = "SELECT `verified` AS `very` FROM `users` WHERE `email` ='$email_entry' LIMIT 1";
+
+        $ok_result = mysqli_query($conn, $ok_check);
+
+        if($ok_result) {
+
+            $row = mysqli_fetch_assoc($ok_result);
+
+            $verified = $row['very'];
+
+
+            if($verified == 1) {
+
+                // header("location: user.php");
+
+            } else { 
+                
+                header("location: error.php");
+            }
+        }
+
+
+    }
+
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +59,8 @@
 </head>
 <body>
 
+    <input id="name_cust" type="hidden" value="<?php echo $_SESSION['users']['email1']; ?>">
+
     <div class="all">
     </div>
     <div class="wrap_nav">
@@ -26,16 +73,15 @@
             <span id="span4">shop<img src="asset/arrowdrop.png"></span>
             <span id="span5">Blog</span>
             <span id="add_span">0</span><img src="asset/shopping.png" id="span6" width="30px">
-            <span id="span7">Sign up</span>
-            <span id="span8">login</span>
+            <span id="span8">Logout</span>
         </nav>
         <!-- End Of Large Screen -->
 
         <!-- for small screen -->
         <nav id="nav2">
             <img src="asset/client_logo.png" id="span3" width="60px" height="50px">
-            <span id="add_span">0</span><img src="asset/shopping.png" id="span6" width="30px">
-            <span id="span8"><span id="only_only">login</span></span>
+            <span id="add_span_ok">0</span><img src="asset/shopping.png" id="span6" width="30px">
+            <span id="span8"><span id="only_only">logout</span></span>
             <img src="asset/dropdown.png" id="span9" width="60px">
 
             <div class="current_m">
@@ -51,7 +97,7 @@
             </div>
 
             <div class="blog_only">
-                Sign Up
+                Sign Out
             </div>
         </nav>
     </div>
@@ -590,7 +636,7 @@
     
     <!-- <script src="js/bootstrap.min.js"></script> -->
     <script src="js/jquery.js"></script>
-    <script src="js/control.js"></script>
-    <script src="js/add-cart.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/add-cart-db.js"></script>
 </body>
 </html>

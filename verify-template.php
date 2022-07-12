@@ -8,9 +8,7 @@ if(!isset($_SESSION['users']['email1'])) {
 
 } else {
 
-    $name_entry = $_SESSION['users']['name1'];
     $email_entry = $_SESSION['users']['email1'];
-    $token_entry = $_SESSION['users']['token_tok'];
 
     require 'database/connect.php';
 
@@ -23,6 +21,7 @@ if(!isset($_SESSION['users']['email1'])) {
         $row = mysqli_fetch_assoc($ok_result);
 
         $verified = $row['very'];
+
 
         if($verified == 1) {
 

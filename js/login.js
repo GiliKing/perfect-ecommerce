@@ -50,7 +50,7 @@ document.getElementsByTagName("button")[0].addEventListener("click", function() 
     } else {
 
         $.ajax({
-            url: '../process/form.php',
+            url: 'process/form.php',
             method: 'POST',
             data: {
                 'email_login': email,
@@ -58,6 +58,7 @@ document.getElementsByTagName("button")[0].addEventListener("click", function() 
             },
             success: function(data) {
 
+                console.log(data)
 
                 if(data.trim() == "not1") {
 

@@ -64,66 +64,90 @@ function run() {
 
 }
 
+// end of drop down;
+
+
+
+
+
+
 let add_list = []
+
+let add = 0;
+
 
 window.addEventListener("load", function() {
 
-    call_again();
-})
+
+    let username = document.querySelector("#name_cust").value;
+
+    $.ajax({
+        url: "process/form.php",
+        method: "POST",
+        data: {
+            name_customer_only: username
+        },
+        success:function(data) {
+
+            let backendList = JSON.parse(data.trim());
 
 
-function call_again() {
+            if(backendList.length == 0) {
+                window.location.href = "user.php";
+            } else {
+                runBack(backendList);
+            }
 
-    let getItem = localStorage.getItem("store");
 
-    if(getItem == null){
-        window.location.href = "index.php";
-    } else {
-        getItem = JSON.parse(getItem);
+        }
+    })
 
-        for(let i = 0; i < getItem.length; i++) {
+    function runBack(ok_item) {
+
+        for(let i = 0; i < ok_item.length; i++) {
 
             let card = document.createElement("div");
 
             let card_body = document.createElement("div");
-
+        
             let img = document.createElement("img")
-
+        
             img.classList.add("img_ok");
-
+        
             let h2 = document.createElement("h3");
-
+        
             let h4 = document.createElement("h4")
-
+        
             let button_del = document.createElement("button");
-
+        
             let hidden_input = document.createElement("input");
-
+        
             hidden_input.type = "hidden"
-
-
+        
+        
             button_del.classList.add(`btn_ok`);
-
+        
             hidden_input.classList.add("hide_id");
             
             h2.classList.add("h2_ok");
 
             h2.classList.add("pl-3");
-
+        
             h4.classList.add("h4_ok");
-
-
+        
+        
             button_del.innerText = "Remove";
 
-            hidden_input.value = i;
+        
+            hidden_input.value = ok_item[i].id;
 
-            h2.innerText = getItem[i].name_item;
+            h2.innerText = ok_item[i].item;
 
-            h4.innerText = getItem[i].price_item;
+            h4.innerText = ok_item[i].price;
 
-            img.src = getItem[i].image_item;
+            img.src = ok_item[i].image;
 
-            let add_price = getItem[i].price_item.substring(getItem[i].price_item.indexOf("N") + 1);
+            let add_price = ok_item[i].price.substring(ok_item[i].price.indexOf("N") + 1);
 
             add_list.push(add_price);
 
@@ -143,20 +167,27 @@ function call_again() {
 
             document.getElementsByClassName("card")[0].appendChild(card_body);
 
+            add += Number(add_list[i]);
+
+            document.getElementById("dis_fig").innerText = add;
         }
+
+        setTimeout(ok_run, 1000)
+
+
     }
-}
+
+        
+})
 
 
-setTimeout(ok_run, 200);
+
+
+
 
 function ok_run() {
 
     let btn_ok = document.getElementsByClassName("btn_ok").length;
-
-    let add = 0;
-
-    let list_product = [];
 
     for(let i = 0; i < btn_ok; i++) {
 
@@ -170,41 +201,27 @@ function ok_run() {
 
             let hide_id = dad.childNodes[4].value;
 
-            console.log(hide_id);
+            console.log(hide_id)
 
-            let check = localStorage.getItem("store");
 
-            check = JSON.parse(check);
+            // send the id to delete
 
-            check.splice(hide_id, 1);
+            $.ajax({
+                url: "process/form.php",
+                method: "POST",
+                data: {
+                    del_id: hide_id
+                },
+                success:function(data) {
 
-            localStorage.removeItem("store");
+                    dad.style.display = "none";
 
-            if(check != null) {
+                    $(".error_back").html(data.trim())
 
-                for(let i = 0; i < check.length; i++) {
-
-                    if(check[i] != null) {
-        
-                        list_product.push (check[i]);
-        
-                        localStorage.setItem("store", JSON.stringify(list_product));
-        
-                        window.location.href = "buy.php";
-        
-                    }
+                    window.location.href = "buyitem.php"
+                    
                 }
-            
-            } else {
-
-                window.location.href = "index.php";
-
-            }
-
-            if(check.length == 0) {
-
-                window.location.href = "index.php";
-            }
+            })
 
       
 
@@ -212,50 +229,40 @@ function ok_run() {
         }) 
     }
 
-    document.getElementsByClassName("check_out")[0].style.display = "block";
 
-    document.getElementById("dis_fig").innerText = add;
 }
-
-
 
 
 document.getElementById("span1").addEventListener("click", function() {
 
-    window.location.href = "index.php";
+    window.location.href = "user.php";
 
 })
 
 
 document.getElementById("span5").addEventListener("click", function() {
 
-    window.location.href = "register.php";
+    window.location.href = "user.php";
     
 })
 
 
 document.getElementById("span6").addEventListener("click", function() {
 
-    window.location.href = "login.php";
+    window.location.href = "logout.php";
     
 })
 
 
 document.getElementById("login").addEventListener("click", function() {
 
-    window.location.href = "login.php";
+    window.location.href = "logout.php";
     
 })
 
 
 document.getElementById("signup").addEventListener("click", function() {
 
-    window.location.href = "register.php";
-    
-})
-
-document.getElementsByClassName("check_out")[0].addEventListener("click", function() {
-
-    window.location.href = "login.php";
+    window.location.href = "user.php";
     
 })

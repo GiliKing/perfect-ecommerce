@@ -48,23 +48,27 @@ if(!isset($_SESSION['users']['email1'])) {
 
         } else {
 
-            echo "No verifcation";
+            // echo "No verifcation";
 
             try {
-                //Server settings
+                 //Server settings
+                $myemail = "christianogili@zohomail.com";
+                $mypassword = "Hoh9090#"; 
+
                 $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
                 $mail->isSMTP();                                            //Send using SMTP
-                $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+                $mail->Host       = 'smtp.zoho.com';                     //Set the SMTP server to send through
                 $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-                $mail->Username   = 'chrisogili12@gmail.com';                     //SMTP username
-                $mail->Password   = 'gle9090#';                               //SMTP password
+                $mail->Username   =   $myemail;                   //SMTP username
+                $mail->Password   =   $mypassword;                          //SMTP password
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
                 $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-        
+                
                 //Recipients
-                $mail->setFrom('chrisogili12@gmail.com', 'Ogili Christian');
+                $mail->setFrom('christianogili@zohomail.com', 'Ogili Christian');
                 $mail->addAddress("$email_entry", "$name_entry");     //Add a recipient
                 $mail->addReplyTo('chrisogili12@gmail.com', 'Ogili Christian');
+        
         
                 //Content
                 $mail->isHTML(true);                                  //Set email format to HTML
@@ -73,9 +77,23 @@ if(!isset($_SESSION['users']['email1'])) {
                 <html>
                     <head>
                         <title>'.$name_entry.' Verify Your Email</title>
+                        <style>
+                            
+                            a {
+                                padding-top: 10px;
+                                padding-bottom: 10px;
+                                color: white;
+                                background-color: yellowgreen;
+                                font-size: 15px;
+                                border-radius: 5px;
+                            }
+                        </style>
                     </head>
                     <body>
-                    <a href="https://perfect-restaurant.herokuapp.com/verifyemail?id='.$token_entry.'">Verify</a>
+
+                    <h1>Verify Your Email By Clicking the button below</h1>
+
+                    <a href="https://perfect-restaurant.herokuapp.com/verifyemail.php?id='.$token_entry.'">Verify</a>
                     </body>
                 </html>
                 ';
@@ -83,13 +101,14 @@ if(!isset($_SESSION['users']['email1'])) {
                 $success = $mail->send();
         
                 if($success) {
-                    
-                    header("location: verify-template.php");
+
+                    echo "<script>window.location.assign('verify-template.php')</script>";
                     
                     // echo 'Message has been sent';
 
                 }
-        
+    
+
             } catch (Exception $e) {
         
                 echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";

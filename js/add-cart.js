@@ -20,6 +20,10 @@ window.addEventListener("load", function() {
 
         document.getElementById("add_span").innerHTML = getItem.length;
 
+        document.getElementById("add_span_num").innerHTML = getItem.length;
+        document.getElementById("add_span_num").style.backgroundColor = "yellowgreen";
+
+
         document.getElementById("add_span1").innerHTML = getItem.length;
 
         document.getElementsByClassName("cart_display_cont")[0].style.display = "inline";
@@ -43,6 +47,8 @@ for(let i = 0; i < btn; i++) {
         if(count == "0") {
             document.getElementById("add_span").style.display = "inline";
             document.getElementById("add_span").innerHTML = Number(count) + 1; 
+            document.getElementById("add_span_num").innerHTML = Number(count) + 1;
+            document.getElementById("add_span_num").style.backgroundColor = "yellowgreen";
             document.getElementById("add_span1").style.display = "block";
             document.getElementById("add_span1").style.textAlign = "center";
             document.getElementById("add_span1").style.fontSize = "25px";
@@ -54,6 +60,8 @@ for(let i = 0; i < btn; i++) {
         if(count > "0") {
             document.getElementById("add_span").innerHTML = Number(count) + 1; 
             document.getElementById("add_span").style.display = "inline";
+            document.getElementById("add_span_num").innerHTML = Number(count) + 1;
+            document.getElementById("add_span_num").style.backgroundColor = "yellowgreen";
             document.getElementById("add_span1").style.display = "block";
             document.getElementById("add_span1").style.textAlign = "center";
             document.getElementById("add_span1").style.fontSize = "25px";
