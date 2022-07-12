@@ -143,7 +143,7 @@
 
                 <div class="col-sm-12">
                     <div class="row">
-                        <div class="col-sm-4">
+                        <div class="col-md-4">
                             <div class="card">
                                 <div class="card-head">
                                     <img src="asset/menu.png" alt="" width="40%" height="50%">
@@ -160,7 +160,7 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-4">
+                        <div class="col-md-4">
                             <div class="card">
                                 <div class="card-head">
                                     <img src="asset/cook.png" alt="" width="40%" height="50%">
@@ -175,7 +175,7 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-4">
+                        <div class="col-md-4">
                             <div class="card">
                                 <div class="card-head">
                                     <img src="asset/delivery.png" alt="" width="40%" height="50%">
@@ -542,7 +542,7 @@
             <div class="container">
                 <div class="col-sm-12">
                     <div class="row">
-                        <div class="col-sm-4">
+                        <div class="col-md-4">
                             <div class="card">
                                 <div class="card-body">
     
@@ -586,7 +586,7 @@
                             </div>
                         </div>
     
-                        <div class="col-sm-4">
+                        <div class="col-md-4">
                             <div class="card">
                                 <div class="card-body">
                                     <h3>Clean Creations</h3>
@@ -601,7 +601,7 @@
                             </div>
                         </div>
     
-                        <div class="col-sm-4">
+                        <div class="col-md-4">
                             <div class="card">
                                 <div class="card-body">
                                     <h3>Meal Ordering</h3>
