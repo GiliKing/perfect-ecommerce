@@ -1,4 +1,47 @@
 
+<?php
+
+session_start();
+
+if(!isset($_SESSION['users']['email1'])) {   
+
+    header("location: index.php");
+
+} else {
+
+    $email_entry = $_SESSION['users']['email1'];
+
+    require 'database/connect.php';
+
+    $ok_check = "SELECT `verified` AS `very` FROM `users` WHERE `email` ='$email_entry' LIMIT 1";
+
+    $ok_result = mysqli_query($conn, $ok_check);
+
+    if($ok_result) {
+
+        $row = mysqli_fetch_assoc($ok_result);
+
+        $verified = $row['very'];
+
+
+        if($verified == 1) {
+
+            header("location: user.php");
+
+        } else { 
+            
+            header("location: error.php");
+        }
+    }
+
+
+}
+
+
+
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">

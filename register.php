@@ -6,7 +6,7 @@
 
     if(!isset($_SESSION['users']['email1'])) {   
 
-        header("location: index.php");
+        // header("location: index.php");
 
     } else {
 
