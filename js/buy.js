@@ -68,11 +68,6 @@ let add_list = []
 
 window.addEventListener("load", function() {
 
-    call_again();
-})
-
-
-function call_again() {
 
     let getItem = localStorage.getItem("store");
 
@@ -144,11 +139,14 @@ function call_again() {
             document.getElementsByClassName("card")[0].appendChild(card_body);
 
         }
+
+        setTimeout(ok_run, 1000);
     }
-}
 
 
-setTimeout(ok_run, 200);
+})
+
+
 
 function ok_run() {
 
