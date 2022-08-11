@@ -1,4 +1,4 @@
-/vendor
+vendor
 /database
 verify.php
 /function/initialize.php
