@@ -1,5 +1,4 @@
-vendor
-/database
+vendor/
+database/
 verify.php
-/function/initialize.php
-/function/callback.php
+function/
