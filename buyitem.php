@@ -115,7 +115,12 @@
 
             
             <div class="check_out">
-                <button>Check Out: N<span id="dis_fig"></span></button>
+                <form action="/php-project1/ecom/function/initialize.php" method="POST">
+                    <input type="hidden" name="name_pay" value="<?php echo $_SESSION['users']['email1'] ?>">
+                    <input type="hidden" name="amount_pay" id="amount_pay">
+                    <button type="submit">Check Out: N<span id="dis_fig"></span></button>
+                </form>
+
             </div>
         </div>
 

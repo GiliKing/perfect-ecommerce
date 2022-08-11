@@ -170,6 +170,8 @@ window.addEventListener("load", function() {
             add += Number(add_list[i]);
 
             document.getElementById("dis_fig").innerText = add;
+
+            document.getElementById("amount_pay").value = add;
         }
 
         setTimeout(ok_run, 1000)
@@ -231,6 +233,7 @@ function ok_run() {
 
 
 }
+
 
 
 document.getElementById("span1").addEventListener("click", function() {
