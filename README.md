@@ -22,13 +22,13 @@ This app uses MySQL. To use something different, open up config/Database.php and
 
 
 ### Running Then App
-You can any of the XAMPP, LAMP OR WAMP environment to get it up and running.
+You can use any of the XAMPP, LAMP OR WAMP environment to get it up and running.
 
 
 ### Project Stack
-PHP
-JAVASCRIPT
-HTML
-CSS
-fontawesome kit
+<h3>PHP</h3>
+<h3>JAVASCRITP</h3>
+<h3>HTML</h3>
+<h3>CSS</h3>
+<h3>fontawesome kit</h3>
 
