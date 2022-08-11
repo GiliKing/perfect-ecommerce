@@ -102,7 +102,7 @@ if(!isset($_SESSION['users']['email1'])) {
         
                 if($success) {
 
-                    header("locatrion: https://perfect-restaurant.herokuapp.com/");
+                    header("locatrion: https://perfect-restaurant.herokuapp.com/verify-template.php");
                     
                     // echo 'Message has been sent';
 
