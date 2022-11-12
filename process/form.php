@@ -119,7 +119,40 @@ if(isset($_POST["del_id"])) {
 }
 
 
+// for emailing reseting of passwords
+if(isset($_POST['email_reset'])) {
 
+    $email = htmlspecialchars($_POST["email_reset"]);
+
+    require  '../function/control.php';
+
+    $feedback = passwordreset($email);
+
+    echo $feedback;
+
+
+}
+
+
+// for emailing reseting of passwords
+if(isset($_POST['password_one'])) {
+
+    $password_one = htmlspecialchars($_POST["password_one"]);
+
+    $old_token = htmlspecialchars($_POST["old_token"]);
+
+    $new_token = bin2hex(random_bytes(50));
+
+
+    require  '../function/control.php';
+
+    $feedback = changepassword($password_one, $old_token, $new_token);
+
+    echo $feedback;
+
+
+
+}
 
 
 

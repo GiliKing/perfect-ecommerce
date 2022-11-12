@@ -1,4 +1,4 @@
-vendor/
-database/
-function/
-verify.php
+# vendor/
+# database/
+# function/
+# verify.php

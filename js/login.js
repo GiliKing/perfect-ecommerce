@@ -127,8 +127,17 @@ document.getElementsByTagName("button")[0].addEventListener("click", function() 
 })
 
 
+// link to register
 document.getElementById("sign_ok").addEventListener("click", function() {
 
     window.location.href = "register.php";
+    
+})
+
+
+// link to sign in
+document.getElementById("ok_sign").addEventListener("click", function() {
+
+    window.location.href = "forgetpassword.php";
     
 })

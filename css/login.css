@@ -34,10 +34,6 @@ body {
     padding-right: 150px;
 }
 
-form {
-    /* border: 1px solid blue; */
-}
-
 form h3 {
     margin-bottom: 30px;
 }
@@ -132,7 +128,7 @@ button:hover {
 }
 
 
-#sign_ok {
+#sign_ok, #ok_sign {
     cursor: pointer;
 }
 
