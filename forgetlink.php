@@ -69,8 +69,8 @@ if(!isset($_SESSION['users']['email_reset'])) {
 
                 <p>Click the link below to reset you password</p>
 
-                <!-- <a href="https://perfect-restaurant.herokuapp.com/resetpasswordlink.php?id='.$token_entry.'">Verify</a> -->
-                <a style="text-decoration: none; padding-top: 10px; padding-bottom: 10px; padding-right: 10px; padding-left: 10px; background-color: green; border-radius: 20px; color: white;" href="http://localhost/php-project1/ecom/resetpasswordlink.php?id='.$token_entry.'">Password Reset</a>
+                <!-- <a style="text-decoration: none; padding-top: 10px; padding-bottom: 10px; padding-right: 10px; padding-left: 10px; background-color: green; border-radius: 20px; color: white;" href="http://localhost/php-project1/ecom/resetpasswordlink.php?id='.$token_entry.'">Password Reset</a> -->
+                <a style="text-decoration: none; padding-top: 10px; padding-bottom: 10px; padding-right: 10px; padding-left: 10px; background-color: green; border-radius: 20px; color: white;" href="https://perfect-restaurant.herokuapp.com/resetpasswordlink.php?id='.$token_entry.'">Password Reset</a>
                 <p>Regards</p>
                 <p>Christian</p>
             </body>
