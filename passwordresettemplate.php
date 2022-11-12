@@ -60,14 +60,15 @@ if(!isset($_SESSION['users']['token_reset'])) {
         </div>
 
         <div class="second">
+
+            <h3>Clean Creation</h3>
+
+            <p>Reset Your Password</p>
+
+
+            <p id="load" style="display : none;">Loading....</p>
+
             <form>
-                <h3>Clean Creation</h3>
-
-                <p>Reset Your Password</p>
-
-
-                <p id="load" style="display : none;">Loading....</p>
-
                 <div class="form">
                     <p class="err4" style="text-align: center;"></p>
                     <div class="cover">
