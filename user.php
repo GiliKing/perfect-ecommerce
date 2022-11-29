@@ -197,8 +197,8 @@
             <!-- end of first section -->
         </div> 
 
-          <!-- second section -->
-          <div class="attach_image_first">
+                    <!-- second section -->
+                    <div class="attach_image_first">
             <div class="container">
                 <div class="attach_text_first">
                 
@@ -213,7 +213,7 @@
                                    <table>
                                        <tr>
                                            <td>
-                                               <img src="asset/line1.jpg" id="image_section" alt="" width="150px" height="150px" id="image_style">
+                                               <img src="asset/images/pizza-recipe-1.jpg" id="image_section" alt="" width="150px" height="150px" id="image_style">
                                            </td>
                                            <td>
                                                <p id="text_section">
@@ -235,7 +235,7 @@
                                    <table>
                                        <tr>
                                            <td>
-                                               <img src="asset/line2.jpg" id="image_section" alt="" width="150px" height="150px" id="image_style">
+                                               <img src="asset/images/fried-chicks.jpg" id="image_section" alt="" width="150px" height="150px" id="image_style">
                                            </td>
                                            <td>
                                                <p id="text_section">
@@ -257,7 +257,7 @@
                                    <table>
                                        <tr>
                                            <td>
-                                               <img src="asset/line3.jpg" id="image_section" alt="" width="150px" height="150px" id="image_style">
+                                               <img src="asset/images/rebrand-shawama.jpg" id="image_section" alt="" width="150px" height="150px" id="image_style">
                                            </td>
                                            <td>
                                                <p id="text_section">
@@ -283,7 +283,7 @@
                                    <table>
                                        <tr>
                                            <td>
-                                               <img src="asset/line1.jpg" id="image_section" alt="" width="150px" height="150px" id="image_style">
+                                               <img src="asset/images/fried-rice.jpg" id="image_section" alt="" width="150px" height="150px" id="image_style">
                                            </td>
                                            <td>
                                                <p id="text_section">
@@ -305,7 +305,7 @@
                                    <table>
                                        <tr>
                                            <td>
-                                               <img src="asset/line2.jpg" id="image_section" alt="" width="150px" height="150px" id="image_style">
+                                               <img src="asset/images/breadwarma.jpg" id="image_section" alt="" width="150px" height="150px" id="image_style">
                                            </td>
                                            <td>
                                                <p id="text_section">
@@ -327,7 +327,7 @@
                                    <table>
                                        <tr>
                                            <td>
-                                               <img src="asset/line3.jpg" id="image_section" alt="" width="150px" height="150px" id="image_style">
+                                               <img src="asset/images/jellof-noddles.jpg" id="image_section" alt="" width="150px" height="150px" id="image_style">
                                            </td>
                                            <td>
                                                <p id="text_section">
