@@ -102,6 +102,8 @@ window.addEventListener("load", function() {
         }
     })
 
+
+    
     function runBack(ok_item) {
 
         for(let i = 0; i < ok_item.length; i++) {
@@ -178,6 +180,7 @@ window.addEventListener("load", function() {
 
 
     }
+
 
         
 })

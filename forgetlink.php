@@ -65,12 +65,12 @@ if(!isset($_SESSION['users']['email_reset'])) {
                     Clean Creation
                 </p>
 
-                <h1>Thanks for signing up</h1>
+                <h1>Reset Yout Password</h1>
 
-                <p>Click the link below to reset you password</p>
+                <p>Click the link below to reset your password</p>
 
                 <!-- <a style="text-decoration: none; padding-top: 10px; padding-bottom: 10px; padding-right: 10px; padding-left: 10px; background-color: green; border-radius: 20px; color: white;" href="http://localhost/php-project1/ecom/resetpasswordlink.php?id='.$token_entry.'">Password Reset</a> -->
-                <a style="text-decoration: none; padding-top: 10px; padding-bottom: 10px; padding-right: 10px; padding-left: 10px; background-color: green; border-radius: 20px; color: white;" href="https://perfect-restaurant.herokuapp.com/resetpasswordlink.php?id='.$token_entry.'">Password Reset</a>
+                <a style="text-decoration: none; padding-top: 10px; padding-bottom: 10px; padding-right: 10px; padding-left: 10px; background-color: green; border-radius: 20px; color: white;" href="http://perfect-restaurant.great-site.net/resetpasswordlink.php?id='.$token_entry.'">Password Reset</a>
                 <p>Regards</p>
                 <p>Christian</p>
             </body>

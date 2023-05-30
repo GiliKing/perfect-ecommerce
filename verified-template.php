@@ -20,6 +20,12 @@
 
         p {
             margin-bottom: 50px;
+            font-size: 20px;
+            color: yellowgreen;
+        }
+
+        h2 {
+            color: yellowgreen;
         }
     </style>
 </head>

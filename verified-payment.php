@@ -36,7 +36,7 @@
 
         <p>Thanks!!!</p>
 
-        <a href="https://perfect-restaurant.herokuapp.com/user.php">Home</a>
+        <a href="http://perfect-restaurant.great-site.net/user.php">Home</a>
     </div>
 </div>
 

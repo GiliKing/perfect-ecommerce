@@ -113,6 +113,8 @@ button {
 
 button:hover {
     box-shadow: 2px 2px 5px 5px rgb(227, 226, 226);
+    border: none;
+    outline: none;
 }
 
 .err1, .err2, .err3 {

@@ -67,7 +67,7 @@ if(!isset($_SESSION['users']['email1'])) {
                 //Recipients
                 $mail->setFrom('christianogili@zohomail.com', 'Ogili Christian');
                 $mail->addAddress("$email_entry", "$name_entry");     //Add a recipient
-                $mail->addReplyTo('chrisogili12@gmail.com', 'Ogili Christian');
+                $mail->addReplyTo('christianogili@zohomail.com', 'Ogili Christian');
         
         
                 //Content
@@ -77,31 +77,9 @@ if(!isset($_SESSION['users']['email1'])) {
                 <html>
                     <head>
                         <title>'.$name_entry.' Verify Your Email</title>
-                        <style>
-                            
-                            a {
-                                padding-top: 10px;
-                                padding-bottom: 10px;
-                                padding-left: 20px;
-                                padding-right: 20px;
-                                color: white;
-                                background-color: yellowgreen;
-                                font-size: 30px;
-                                border-radius: 5px;
-                                marging-bottom: 20px;
-                            }
-
-                            div {
-                                padding-top: 30px;
-                                padding-bottom: 30px;
-                                color: white;
-                                background-color: yellowgreen;
-                                font-size: 30px;
-                            }
-                        </style>
                     </head>
-                    <body>
-                        <div>
+                    <body style="text-align: center">
+                        <div style="font-size: 20px;">
                             Clean Creation
                         </div>
 
@@ -109,12 +87,12 @@ if(!isset($_SESSION['users']['email1'])) {
 
                         <p>Verify Your Email By Clicking the button below</p>
 
-                        <a href="https://perfect-restaurant.herokuapp.com/verifyemail.php?id='.$token_entry.'">Verify</a>
+                        <a style="text-decoration: none; border: 1px solid yellowgreen; padding: 10px 10px 10px 10px;" href="http://perfect-restaurant.great-site.net/verifyemail.php?id='.$token_entry.'">Verify</a>
                         </body>
 
 
                         <p>Regards</p>
-                        <p>Christian</p>
+                        <p>Clean Creation</p>
                     </body>
                 </html>
                 ';
@@ -123,9 +101,17 @@ if(!isset($_SESSION['users']['email1'])) {
         
                 if($success) {
 
-                    header("locatrion: https://perfect-restaurant.herokuapp.com/verify-template.php");
+                    echo '
+                    <script>
+                        window.location.href = "http://perfect-restaurant.great-site.net/verify-template.php";
+                    </script>
+                    ';
+
+                    // header("locatrion: https://perfect-restaurant.herokuapp.com/verify-template.php");
                     
                     // echo 'Message has been sent';
+
+                    
 
                 }
     

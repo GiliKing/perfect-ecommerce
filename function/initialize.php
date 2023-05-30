@@ -14,7 +14,7 @@ if(isset($_POST['name_pay']) && isset($_SESSION['users']['email1'])) {
     $amount = $amount_pay * 100;  //the amount in kobo. This value is actually NGN 300
 
     // url to go to after payment
-    $callback_url = 'https://perfect-restaurant.herokuapp.com/function/callback.php';  
+    $callback_url = 'http://perfect-restaurant.great-site.net/function/callback.php';  
 
     curl_setopt_array($curl, array(
       CURLOPT_URL => "https://api.paystack.co/transaction/initialize",
@@ -55,7 +55,7 @@ if(isset($_POST['name_pay']) && isset($_SESSION['users']['email1'])) {
 
 } else {
 
-  header("location: https://perfect-restaurant.herokuapp.com/index.php");
+  header("location: http://perfect-restaurant.great-site.net/index.php");
 
 }
 

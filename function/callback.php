@@ -57,7 +57,7 @@ if(isset($_SESSION['users']['email1'])) {
       
         echo"
       <script>
-        window.location.href = 'https://perfect-restaurant.herokuapp.com/verified-payment.php'
+        window.location.href = 'http://perfect-restaurant.great-site.net/verified-payment.php'
       </script>
       ";
 
@@ -74,7 +74,7 @@ if(isset($_SESSION['users']['email1'])) {
 
     echo"
     <script>
-      window.location.href = 'https://perfect-restaurant.herokuapp.com/index.php';
+      window.location.href = 'http://perfect-restaurant.great-site.net/index.php';
     </script>
     ";
 }

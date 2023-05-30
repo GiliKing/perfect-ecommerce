@@ -1,16 +1,27 @@
 
 <?php
 
-$host_name = "us-cdbr-east-05.cleardb.net";
-$user_name = "b69d0280343ae5";
-$user_password = "f4bbaf33";
-$user_db = "heroku_2227a9ef1d1a881";
+
 
 
 // $host_name = "localhost";
 // $user_name = "root";
 // $user_password = "";
 // $user_db = "restaurant";
+
+
+
+// $host_name = "sql200.ezyro.com";
+// $user_name = "ezyro_34056644";
+// $user_password = "drdqv7px7ph3f";
+// $user_db = "ezyro_34056644_restaurant";
+
+
+$host_name = "sql300.epizy.com";
+$user_name = "epiz_33688160";
+$user_password = "R8Yzihy0nZTvH";
+$user_db = "epiz_33688160_restaurant";
+
 
 
 
