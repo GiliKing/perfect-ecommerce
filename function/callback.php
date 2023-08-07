@@ -47,23 +47,48 @@ if(isset($_SESSION['users']['email1'])) {
 
     $name_pay = $_SESSION['users']['email1'];
 
-    $clearData = "DELETE FROM `user-item` WHERE `name` = '$name_pay'";
+    $order_check = "SELECT * FROM `user-item` WHERE `name` = '$name_pay'";
 
-    $result = mysqli_query($conn, $clearData);
+    $order_result = mysqli_query($conn, $order_check);
+
+    if($order_result) {
+
+      $paid_entry = "paid";
+      $date_entry = date('Y-m-d H:i:s'); // Example format: 2023-08-06 12:34:56
+      $token_entry = bin2hex(random_bytes(50));
+
+      while($row = mysqli_fetch_array($order_result, MYSQLI_ASSOC)) {
+
+        $name_entry = $row['name'];
+        $item_entry = $row['item'];
+        $price_entry = $row['price'];
 
 
-    if($result) {
+        $order_again = "INSERT INTO `orders` (`name`, `item`, `price`, `paid`, `date`, `token`) VALUES('$name_entry', '$item_entry', '$price_entry',  '$paid_entry', '$date_entry', '$token_entry')";
+        
+        $order_again_result = mysqli_query($conn, $order_again);
+        
+      }
 
-      
-        echo"
-      <script>
-        window.location.href = 'http://perfect-restaurant.great-site.net/verified-payment.php'
-      </script>
-      ";
+      $clearData = "DELETE FROM `user-item` WHERE `name` = '$name_pay'";
 
-    } else {
+      $result = mysqli_query($conn, $clearData);
+  
+  
+      if($result) {
+  
+        
+          echo"
+        <script>
+          window.location.href = 'http://perfect-restaurant.great-site.net/verified-payment.php'
+        </script>
+        ";
+  
+      } else {
+  
+          echo mysqli_error($conn);
+      }
 
-        echo mysqli_error($conn);
     }
 
 

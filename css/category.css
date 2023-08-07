@@ -1,0 +1,19 @@
+
+div.category_section {
+    width:80%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+div.category_section div.row div.col-md-4 {
+    margin-top: 30px;
+}
+
+div.category_section div.col-sm-12 div.text_brand {
+    border-bottom: 2px solid black;
+    padding-top: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    width: 80%;
+    margin: 0px auto;
+}

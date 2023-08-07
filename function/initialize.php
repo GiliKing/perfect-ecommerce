@@ -11,10 +11,12 @@ if(isset($_POST['name_pay']) && isset($_SESSION['users']['email1'])) {
     $curl = curl_init();
 
     $email = $name_pay;
-    $amount = $amount_pay * 100;  //the amount in kobo. This value is actually NGN 300
+    $amount = intval($amount_pay) * 100;  //the amount in kobo. This value is actually NGN 300
 
     // url to go to after payment
-    $callback_url = 'http://perfect-restaurant.great-site.net/function/callback.php';  
+    $callback_url = 'http://perfect-restaurant.great-site.net/function/callback.php'; 
+    // $callback_url = 'http://localhost/php-project1/ecom/function/callback.php';  
+
 
     curl_setopt_array($curl, array(
       CURLOPT_URL => "https://api.paystack.co/transaction/initialize",

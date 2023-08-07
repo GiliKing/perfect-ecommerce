@@ -22,7 +22,8 @@ session_start();
 
 if(!isset($_SESSION['users']['email1'])) {   
 
-    header("location: error.php");
+    // header("location: error.php");
+    echo "yes verigy has issues";
 
 } else {
 

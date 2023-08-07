@@ -42,9 +42,6 @@
 ?>
 
 <!DOCTYPE html>
-
-
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -105,12 +102,11 @@
 
     <!-- drop down for shop -->
     <div class="shopdrop">
-            <p>Subscription Meal Selection</p>
-            <p>A la Carte</p>
-            <p>Protien By Pound</p>
-            <p>Customer Builder</p>
-            <p>Extras</p>
-            <p>Gift Card</p>
+            <p>African Kitchen</p>
+            <p>Favours Favourite</p>
+            <p>Famot Cake & Delight</p>
+            <p>Comming Soon...</p>
+            <p>Comming Soon...</p>
         </div>
     <!-- end of dropdown for shop -->
 
@@ -347,7 +343,7 @@
                     </div>
 
                     <div class="link_a">
-                        <a href="#">VIEW ENTIRE MENU</a>
+                        <a href="category.php">VIEW ENTIRE MENU</a>
                     </div>
 
                 </div>

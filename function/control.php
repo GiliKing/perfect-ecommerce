@@ -130,7 +130,6 @@ function check($email) {
 
 
 // for login
-
 function login($email, $password) {
 
     require '../database/connect.php';
@@ -223,7 +222,6 @@ function login($email, $password) {
 
 
 // storing of localStore
-
 function localStore($name_cust, $name_item, $price_item, $image_item) {
 
     require "../database/connect.php";
@@ -333,7 +331,6 @@ function localStoreAgain($name_customer) {
 
 
 // button click to store
-
 function normalStore($name_customer_add, $name_item_add, $price_item_add, $image_item_add) {
 
     require "../database/connect.php";
@@ -395,7 +392,6 @@ function normalStore($name_customer_add, $name_item_add, $price_item_add, $image
 
 
 // selecting all the related item to display
-
 function buyStore($name_customer_ok) {
 
     require "../database/connect.php";
@@ -443,7 +439,6 @@ function buyStore($name_customer_ok) {
 
 
 function delStore($del_id) {
-
     require "../database/connect.php";
    
     $check_again = "DELETE FROM `user-item` WHERE `id` = '$del_id'";

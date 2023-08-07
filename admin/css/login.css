@@ -1,0 +1,215 @@
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    /* width: 100%; */
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 100%;
+    margin: 0px auto;
+    display: flex;
+    height: 100vh;
+}
+
+.first {
+    flex-basis: 50%;
+    background-image: url("../asset/login_image.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-shrink: 1;
+
+}
+
+.second {
+    flex-basis: 50%;
+    padding-top: 170px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+form h3 {
+    margin-bottom: 30px;
+}
+
+form p {
+    margin-bottom: 30px;
+}
+
+.form {
+    border: 1px solid lightgray;
+    margin-top: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 5px rgb(227, 226, 226);
+}
+
+label {
+    display: block;
+    font-size: 15px;
+}
+
+.line {
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0.2px solid lightgray;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+input {
+    width: 100%;
+    padding-top: 6px;
+    padding-bottom: 10px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid lightgrey;
+    outline: none;
+    transition: width 0.5s ease-in;
+}
+
+input:hover {
+    border-bottom: 1px solid blue;
+    width: 50%;
+}
+
+.cover {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.sign {
+    margin-top: 20px;
+}
+
+#ok_sign {
+    float: right;
+}
+
+
+button {
+    margin-top: 30px;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    background-color: yellowgreen;
+    color: white;
+    font-size: 15px;
+    transition: box-shadow 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 2px 2px 5px 5px rgb(227, 226, 226);
+    border: none;
+    outline: none;
+}
+
+.err1, .err2, .err3 {
+    color: red;
+    margin-top: 6px;
+    display: block;
+}
+
+.exist {
+    color: red;
+    margin-top: 6px;
+    display: none;
+}
+
+
+#sign_ok, #ok_sign {
+    cursor: pointer;
+}
+
+@media (max-width: 930px) {
+    #ok_sign {
+        float: none;
+        margin-top: 10px;
+        display: block;
+    }
+
+    .sign {
+        text-align: center;
+    }
+    
+}
+
+@media (max-width: 760px) {
+    .first {
+        display: none;
+    }
+    
+    .second {
+        flex-basis: 100%;
+        background-image: url(../asset/login_image.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    input {
+        background-color: transparent;
+        color: black;
+        font-size: 22px;
+    }
+
+    label {
+        color: white;
+    }
+
+    h3 {
+        color: white;
+    }
+
+    p {
+        color: white;
+    }
+
+    span {
+        color: white;
+    }
+
+}
+
+
+@media (max-width: 544px) {
+
+    .second {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    
+}
+
+@media (max-width: 425px) {
+
+    .second {
+        padding-top: 80px;
+    }
+
+    .container {
+        height: 800px;
+    }
+}
+
+@media (max-width: 410px) {
+
+    .second {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}

@@ -347,7 +347,7 @@
                     </div>
 
                     <div class="link_a">
-                        <a href="#">VIEW ENTIRE MENU</a>
+                        <a href="category.php">VIEW ENTIRE MENU</a>
                     </div>
 
                 </div>
